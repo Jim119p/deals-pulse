@@ -7,9 +7,9 @@ original_price: 112.5
 discount_percent: 20
 merchant: Amazon
 category: Gaming
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+image_url: https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20317656-corsair-void-v2-max-wireless-over-the-ear-gaming-headset-with-simultaneous-2-4ghz-bluetooth-for-pc-mac-ps5-ps4-switch-mobile-carbon-89-99-bestbuy-com?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.982607+00:00'
+published_at: '2026-11-16T17:42:06.708020+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

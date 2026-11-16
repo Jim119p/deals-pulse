@@ -7,9 +7,9 @@ original_price: 67.58
 discount_percent: 77
 merchant: Amazon
 category: Laptops & Computers
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+image_url: https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20299449-3-pc-suzume-72-teeth-dual-direction-torque-wrench-set-1-4-3-8-1-2-52-04-free-shipping?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.980165+00:00'
+published_at: '2026-11-16T17:42:06.707197+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

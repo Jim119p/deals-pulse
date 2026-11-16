@@ -7,9 +7,9 @@ original_price: 35.0
 discount_percent: 71
 merchant: Amazon
 category: Smartphones & Tablets
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+image_url: https://images.unsplash.com/photo-1511707171634-5f897ff02560?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20293479-magsafe-phone-grip-ring-w-silicone-loop-dual-hinge-kickstand-n52-magnets-9-99-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.979552+00:00'
+published_at: '2026-11-16T17:42:06.706764+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

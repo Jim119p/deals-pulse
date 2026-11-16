@@ -5,10 +5,10 @@ deal_price: 13.79
 original_price: 22.99
 discount_percent: 40
 merchant: Amazon
-category: Electronics & Gadgets
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+category: Outdoors & Sports
+image_url: https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20311872-17-5-wxfana-double-layer-mesh-pool-skimmer-net-13-79-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.982996+00:00'
+published_at: '2026-11-16T17:42:06.708395+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

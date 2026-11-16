@@ -6,9 +6,9 @@ original_price: 35.0
 discount_percent: 71
 merchant: Amazon
 category: Smart Home
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+image_url: https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20310966-wastroyal-100ft-warm-white-led-fairy-string-lights-w-timer-8-modes-9-99-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.980660+00:00'
+published_at: '2026-11-16T17:42:06.707542+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

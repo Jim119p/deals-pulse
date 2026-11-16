@@ -6,10 +6,10 @@ deal_price: 9.99
 original_price: 10.0
 discount_percent: 0
 merchant: Amazon
-category: Electronics & Gadgets
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+category: Shoes & Apparel
+image_url: https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20309796-5-pair-cailecotton-women-s-high-waisted-cotton-brief-underwear-s-5xl-various-colors-9-99-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.980486+00:00'
+published_at: '2026-11-16T17:42:06.707459+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

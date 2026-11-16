@@ -6,9 +6,9 @@ original_price: 9.99
 discount_percent: 50
 merchant: Amazon
 category: Laptops & Computers
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+image_url: https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20307393-5-piece-decute-stainless-steel-cuticle-trimmer-set-w-pusher-scissors-green-or-pink-4-99-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.980776+00:00'
+published_at: '2026-11-16T17:42:06.707618+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

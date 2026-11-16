@@ -6,9 +6,9 @@ original_price: 625.0
 discount_percent: 20
 merchant: Amazon
 category: Laptops & Computers
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+image_url: https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20317560-499-99-samsung-27-odyssey-g8-g80hf-gaming-monitor-5k-resolution-fast-ips-180hz-dual-mode-qhd-360hz-at-amazon?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.980042+00:00'
+published_at: '2026-11-16T17:42:06.707112+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

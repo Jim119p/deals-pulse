@@ -6,9 +6,9 @@ original_price: 17.99
 discount_percent: 50
 merchant: Amazon
 category: Electronics & Gadgets
-image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
+image_url: https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20298192-prime-lifechill-metal-trigger-point-massage-tool-w-gua-sha-fascia-release-silver-8-99-free-shipping?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:53:28.979682+00:00'
+published_at: '2026-11-16T17:42:06.706864+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount
