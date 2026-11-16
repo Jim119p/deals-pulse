@@ -1,0 +1,146 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import dealsData from '../../data/deals.json';
+
+export async function getStaticPaths() {
+  return dealsData.map((deal: any) => ({
+    params: { slug: deal.slug },
+    props: { deal },
+  }));
+}
+
+const { deal } = Astro.props;
+const savings = (deal.original_price - deal.deal_price).toFixed(2);
+
+// Google Schema.org Product & Offer 结构化数据
+const schemaData = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": deal.title,
+  "image": [deal.image_url],
+  "description": deal.description,
+  "offers": {
+    "@type": "Offer",
+    "url": deal.affiliate_url,
+    "priceCurrency": "USD",
+    "price": deal.deal_price,
+    "priceValidUntil": new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": deal.merchant
+    }
+  }
+};
+---
+
+<Layout 
+  title={`${deal.title} - Only $${deal.deal_price.toFixed(2)} (${deal.discount_percent}% Off)`}
+  description={`Save $${savings} on ${deal.title}. Verified deal at ${deal.merchant} for $${deal.deal_price.toFixed(2)}. Limited time price drop.`}
+  image={deal.image_url}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  </Fragment>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center space-x-2 text-xs font-medium text-slate-500 mb-6">
+      <a href="/" class="hover:text-emerald-600">Home</a>
+      <span>/</span>
+      <a href={`/category/${deal.category}`} class="hover:text-emerald-600">{deal.category}</a>
+      <span>/</span>
+      <span class="text-slate-800 truncate max-w-xs">{deal.title}</span>
+    </nav>
+
+    <!-- Main Product Section -->
+    <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Left: Image Showcase -->
+      <div class="bg-slate-50 rounded-2xl p-8 flex items-center justify-center relative border border-slate-100 min-h-[360px]">
+        <img 
+          src={deal.image_url} 
+          alt={deal.title}
+          class="max-h-80 max-w-full object-contain drop-shadow-md"
+        />
+        {deal.discount_percent > 0 && (
+          <span class="absolute top-4 left-4 bg-rose-600 text-white font-black text-sm px-3 py-1 rounded-xl shadow">
+            SAVE {deal.discount_percent}%
+          </span>
+        )}
+      </div>
+
+      <!-- Right: Deal Details & Buy CTA -->
+      <div class="flex flex-col justify-between">
+        <div>
+          <div class="flex items-center space-x-2 text-xs font-bold text-emerald-700 mb-2">
+            <span class="bg-emerald-100 px-2 py-0.5 rounded-full">{deal.merchant}</span>
+            <span class="text-slate-300">•</span>
+            <span class="text-slate-500">Verified Drop</span>
+          </div>
+
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+            {deal.title}
+          </h1>
+
+          <!-- Price Display -->
+          <div class="mt-6 bg-slate-50 rounded-2xl p-5 border border-slate-100">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Deal Price</div>
+            <div class="flex items-baseline space-x-3">
+              <span class="text-4xl font-black text-slate-900">${deal.deal_price.toFixed(2)}</span>
+              {deal.original_price > deal.deal_price && (
+                <span class="text-lg font-semibold text-slate-400 line-through">
+                  ${deal.original_price.toFixed(2)}
+                </span>
+              )}
+            </div>
+            {Number(savings) > 0 && (
+              <div class="mt-2 text-sm font-bold text-emerald-600 flex items-center space-x-1">
+                <span>💰 You Save: ${savings} ({deal.discount_percent}% off regular price)</span>
+              </div>
+            )}
+          </div>
+
+          <!-- Features -->
+          <div class="mt-6">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Deal Highlights</h3>
+            <ul class="space-y-2 text-sm text-slate-700">
+              {deal.features.map((f: string) => (
+                <li class="flex items-center space-x-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-8 pt-6 border-t border-slate-100 space-y-3">
+          <a 
+            href={deal.affiliate_url} 
+            target="_blank" 
+            rel="noopener noreferrer sponsored"
+            class="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-center text-base shadow-lg shadow-emerald-600/30 transition flex items-center justify-center space-x-2"
+          >
+            <span>View Deal on {deal.merchant}</span>
+            <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <p class="text-[11px] text-center text-slate-400">
+            *Pricing and availability verified at time of posting. Merchants may expire discounts at any moment.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Description -->
+    <div class="mt-10 bg-white rounded-3xl border border-slate-200 p-8">
+      <h2 class="text-lg font-bold text-slate-900 mb-4">Detailed Description & Overview</h2>
+      <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+        {deal.description}
+      </p>
+    </div>
+  </div>
+</Layout>

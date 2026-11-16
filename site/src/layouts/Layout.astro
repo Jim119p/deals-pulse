@@ -1,0 +1,124 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { 
+  title, 
+  description = "Find the best verified daily deals, price drops, and discounts on electronics, laptops, smart home, and outdoors across top US retailers.",
+  image = "/favicon.svg"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title} | DealsPulse - Daily Handpicked Price Drops</title>
+    <meta name="title" content={`${title} | DealsPulse`} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <slot name="schema" />
+  </head>
+  <body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col font-sans antialiased">
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white text-xs sm:text-sm py-1.5 px-4 text-center font-medium shadow-inner">
+      ⚡ Live Deals Tracker: Automated real-time price monitoring across Amazon, Best Buy, Walmart & more.
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <a href="/" class="flex items-center space-x-2">
+            <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-white font-black text-xl shadow-md shadow-emerald-500/20">⚡</span>
+            <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">Deals<span class="text-emerald-600">Pulse</span></span>
+          </a>
+          <span class="hidden md:inline-block px-2 py-0.5 text-[11px] font-semibold bg-emerald-100 text-emerald-800 rounded-full">Automated 24/7</span>
+        </div>
+
+        <nav class="hidden sm:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+          <a href="/" class="hover:text-emerald-600 transition">All Deals</a>
+          <a href="/category/Audio & Headphones" class="hover:text-emerald-600 transition">Audio</a>
+          <a href="/category/Laptops & Computers" class="hover:text-emerald-600 transition">Laptops & PCs</a>
+          <a href="/category/Smart Home" class="hover:text-emerald-600 transition">Smart Home</a>
+        </nav>
+
+        <div class="flex items-center space-x-3">
+          <a href="#newsletter" class="px-3.5 py-1.5 rounded-lg bg-slate-900 text-white hover:bg-emerald-600 text-xs sm:text-sm font-semibold shadow transition duration-200">
+            Get Alerts
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer with Legal & FTC Affiliate Disclosure -->
+    <footer class="bg-white border-t border-slate-200 mt-16 text-slate-500 text-xs sm:text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-2 mb-3">
+              <span class="w-6 h-6 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-black text-sm">⚡</span>
+              <span class="text-lg font-bold text-slate-900">DealsPulse</span>
+            </div>
+            <p class="text-slate-600 max-w-sm mb-4 leading-relaxed">
+              Automated high-frequency deal aggregation and price-drop tracking across leading US e-commerce platforms. Helping savvy shoppers save thousands every day.
+            </p>
+            <p class="text-slate-400 text-xs">
+              © {new Date().getFullYear()} DealsPulse. All rights reserved.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm mb-3">Popular Categories</h4>
+            <ul class="space-y-2 text-xs sm:text-sm">
+              <li><a href="/category/Laptops & Computers" class="hover:text-emerald-600">Laptops & PCs</a></li>
+              <li><a href="/category/Audio & Headphones" class="hover:text-emerald-600">Headphones & Audio</a></li>
+              <li><a href="/category/Smart Home" class="hover:text-emerald-600">Smart Home Gadgets</a></li>
+              <li><a href="/category/Gaming" class="hover:text-emerald-600">Gaming & Consoles</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm mb-3">Compliance & Info</h4>
+            <ul class="space-y-2 text-xs sm:text-sm">
+              <li><a href="#" class="hover:text-emerald-600">About Our Bot Tracker</a></li>
+              <li><a href="#" class="hover:text-emerald-600">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-emerald-600">Terms of Service</a></li>
+              <li><a href="#" class="hover:text-emerald-600">Affiliate Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mandatory FTC Affiliate Disclosure -->
+        <div class="border-t border-slate-100 pt-6 text-[11px] text-slate-400 leading-relaxed text-center md:text-left">
+          <strong>FTC Affiliate Disclosure:</strong> DealsPulse is an independent publisher supported by our readers. When you click through our verified deal links and make a purchase on retail partner websites (including Amazon, Best Buy, Walmart, and other affiliated networks), we may earn an affiliate commission at absolutely no additional cost to you. Product prices, discounts, and availability are subject to change by merchants.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

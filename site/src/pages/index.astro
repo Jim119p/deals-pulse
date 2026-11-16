@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DealCard from '../components/DealCard.astro';
+import dealsData from '../data/deals.json';
+
+// 获取所有分类
+const categories = ["All", ...new Set(dealsData.map((d: any) => d.category))];
+---
+
+<Layout title="Today's Top Verified Deals & Price Drops">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-emerald-50/60 via-slate-50 to-slate-50 pt-12 pb-10 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-4">
+        <span>🔥 Trending Price Drops</span>
+        <span>•</span>
+        <span>Updated Today</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
+        Never Pay Retail Price Again. <br/>
+        <span class="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Real-Time US Deals & Steals</span>
+      </h1>
+      
+      <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        Our automated price monitors track thousands of gadgets, electronics, and home essentials across Amazon, Best Buy, and Walmart to catch the biggest verified price drops.
+      </p>
+
+      <!-- Search & Filter Quick Bar -->
+      <div class="mt-8 max-w-xl mx-auto">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="dealSearch" 
+            placeholder="Search deals (e.g. AirPods, MacBook, Sony, Robot Vacuum)..." 
+            class="w-full px-5 py-3.5 pl-12 rounded-2xl bg-white border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm text-sm"
+          />
+          <svg class="w-5 h-5 text-slate-400 absolute left-4 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Deals Grid Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <!-- Category Filter Pills -->
+    <div class="flex items-center space-x-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
+      {categories.map((cat, idx) => (
+        <button 
+          class={`category-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-200 ${idx === 0 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20 active-category' : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'}`}
+          data-category={cat}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+
+    <!-- Deals Grid -->
+    <div id="dealsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {dealsData.map((deal: any) => (
+        <div class="deal-item" data-category={deal.category} data-title={deal.title.toLowerCase()}>
+          <DealCard deal={deal} />
+        </div>
+      ))}
+    </div>
+
+    <!-- Empty State (hidden by default) -->
+    <div id="noResults" class="hidden text-center py-16">
+      <div class="w-16 h-16 mx-auto mb-4 bg-slate-100 text-slate-400 rounded-2xl flex items-center justify-center text-2xl">🔍</div>
+      <h3 class="text-lg font-bold text-slate-800">No matching deals found</h3>
+      <p class="text-slate-500 text-sm mt-1">Try another keyword or select a different category.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="bg-slate-900 text-white py-14 mt-10">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Free Daily Digest</span>
+      <h2 class="text-2xl sm:text-4xl font-extrabold mt-2 tracking-tight">Get Alerted When Prices Crash</h2>
+      <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+        Join 15,000+ smart shoppers receiving our 24/7 automated instant price drop notifications right in their inbox.
+      </p>
+      <form class="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+        <input 
+          type="email" 
+          placeholder="Enter your email address" 
+          required
+          class="flex-1 px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        />
+        <button 
+          type="submit" 
+          class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-sm transition shadow-lg shadow-emerald-600/30 whitespace-nowrap"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Client-side Interactive Search & Category Filter Script -->
+  <script>
+    const searchInput = document.getElementById('dealSearch') as HTMLInputElement;
+    const categoryBtns = document.querySelectorAll('.category-filter-btn');
+    const dealItems = document.querySelectorAll('.deal-item');
+    const noResults = document.getElementById('noResults');
+
+    let currentCategory = 'All';
+    let currentQuery = '';
+
+    function filterDeals() {
+      let visibleCount = 0;
+      dealItems.forEach(item => {
+        const el = item as HTMLElement;
+        const itemCat = el.getAttribute('data-category') || '';
+        const itemTitle = el.getAttribute('data-title') || '';
+
+        const matchesCat = (currentCategory === 'All') || (itemCat === currentCategory);
+        const matchesQuery = !currentQuery || itemTitle.includes(currentQuery.toLowerCase());
+
+        if (matchesCat && matchesQuery) {
+          el.style.display = 'block';
+          visibleCount++;
+        } else {
+          el.style.display = 'none';
+        }
+      });
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        categoryBtns.forEach(b => {
+          b.classList.remove('bg-emerald-600', 'text-white', 'shadow-md', 'shadow-emerald-600/20');
+          b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+        });
+        const target = e.currentTarget as HTMLElement;
+        target.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+        target.classList.add('bg-emerald-600', 'text-white', 'shadow-md', 'shadow-emerald-600/20');
+
+        currentCategory = target.getAttribute('data-category') || 'All';
+        filterDeals();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentQuery = (e.target as HTMLInputElement).value.trim();
+        filterDeals();
+      });
+    }
+  </script>
+</Layout>

@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DealCard from '../../components/DealCard.astro';
+import dealsData from '../../data/deals.json';
+
+export async function getStaticPaths() {
+  const categories = [...new Set(dealsData.map((d: any) => d.category))] as string[];
+  return categories.map((category) => ({
+    params: { category },
+    props: {
+      category,
+      deals: dealsData.filter((d: any) => d.category === category),
+    },
+  }));
+}
+
+const { category, deals } = Astro.props;
+---
+
+<Layout 
+  title={`Best Deals in ${category}`}
+  description={`Browse verified price drops and discounts on ${category}. Updated daily from top US stores.`}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="mb-8">
+      <a href="/" class="text-xs font-semibold text-emerald-600 hover:underline mb-2 inline-block">← Back to All Deals</a>
+      <h1 class="text-3xl font-black text-slate-900 tracking-tight">
+        {category} Deals
+      </h1>
+      <p class="text-slate-500 text-sm mt-1">
+        Showing {deals.length} verified price drops and active bargains.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {deals.map((deal: any) => (
+        <DealCard deal={deal} />
+      ))}
+    </div>
+  </div>
+</Layout>
