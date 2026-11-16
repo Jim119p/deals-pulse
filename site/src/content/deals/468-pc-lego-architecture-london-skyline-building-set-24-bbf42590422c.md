@@ -8,7 +8,7 @@ merchant: Amazon
 category: Laptops & Computers
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20313414-468-piece-lego-architecture-london-skyline-21034-23-99-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.413514+00:00'
+published_at: '2026-11-16T13:12:58.421047+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

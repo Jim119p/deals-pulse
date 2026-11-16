@@ -9,7 +9,7 @@ merchant: Newegg
 category: Gaming
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20304378-amd-ryzen-7-7800x3d-rosewill-frostmax-360mm-digital-argb-gaming-aio-cpu-cooler-338-98?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.413188+00:00'
+published_at: '2026-11-16T13:12:58.420685+00:00'
 features:
 - Lowest tracked price at Newegg
 - Verified authentic discount

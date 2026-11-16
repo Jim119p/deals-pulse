@@ -8,7 +8,7 @@ merchant: Walmart
 category: Gaming
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20317590-saros-playstation-5-30?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.386421+00:00'
+published_at: '2026-11-16T13:12:58.397468+00:00'
 features:
 - Lowest tracked price at Walmart
 - Verified authentic discount

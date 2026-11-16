@@ -9,7 +9,7 @@ merchant: Best Buy
 category: Home & Kitchen
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20313939-ninja-possiblecooker-pro-8-5-qt-14-in-1-multi-cooker-stone-purple-99-99-free-shipping?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.414130+00:00'
+published_at: '2026-11-16T13:12:58.421617+00:00'
 features:
 - Lowest tracked price at Best Buy
 - Verified authentic discount

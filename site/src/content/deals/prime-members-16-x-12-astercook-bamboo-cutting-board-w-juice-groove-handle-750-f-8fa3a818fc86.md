@@ -9,7 +9,7 @@ merchant: Amazon
 category: Electronics & Gadgets
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20316687-prime-16-x-12-astercook-bamboo-cutting-board-w-juice-groove-handle-brown-or-yellow-7-49-free-shipping?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.412949+00:00'
+published_at: '2026-11-16T13:12:58.420456+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

@@ -9,7 +9,7 @@ merchant: Macy's
 category: Electronics & Gadgets
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20304747-4-pk-clinique-pop-longwear-lipstick-gift-set-travel-size-20-more-free-pickup?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.413913+00:00'
+published_at: '2026-11-16T13:12:58.421401+00:00'
 features:
 - Lowest tracked price at Macy's
 - Verified authentic discount

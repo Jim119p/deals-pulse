@@ -8,7 +8,7 @@ merchant: Amazon
 category: Electronics & Gadgets
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20316357-amazon-grocery-honey-roasted-peanuts-16-oz-1-61?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.386018+00:00'
+published_at: '2026-11-16T13:12:58.397138+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

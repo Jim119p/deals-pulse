@@ -8,7 +8,7 @@ merchant: Amazon
 category: Electronics & Gadgets
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20315598-sns-ac-14-19-or-12-40-3-12-pack-12-oz-pepsi-zero-sugar-cola-soda-wild-cherry-4-73-each-at-amazon?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.413422+00:00'
+published_at: '2026-11-16T13:12:58.420926+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

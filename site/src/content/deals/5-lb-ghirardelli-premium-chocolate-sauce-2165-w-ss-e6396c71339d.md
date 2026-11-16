@@ -8,7 +8,7 @@ merchant: Amazon
 category: Electronics & Gadgets
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20316282-ghirardelli-premium-chocolate-sauce-net-wt-5-lb-7-3-oz-chocolate-87-3-oz-21-66-with-s-s-amazon?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T13:09:11.412798+00:00'
+published_at: '2026-11-16T13:12:58.420323+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount
