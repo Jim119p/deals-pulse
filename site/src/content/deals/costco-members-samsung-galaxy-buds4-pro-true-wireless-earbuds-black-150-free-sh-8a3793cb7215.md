@@ -9,7 +9,7 @@ merchant: Costco
 category: Audio & Headphones
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20318454-costco-members-samsung-galaxy-buds4-pro-true-wireless-earbuds-black-150-free-s-h?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:00:04.495540+00:00'
+published_at: '2026-11-16T16:53:28.983505+00:00'
 features:
 - Lowest tracked price at Costco
 - Verified authentic discount
@@ -19,7 +19,11 @@ status: active
 
 ## Deal Overview
 
-https://www.costco.com/p/-/samsun...4201049488
+[BEGINS NOVEMBER 16 - NOVEMBER 30] 
+ 
+Samsung Galaxy Buds 4 Pro (US Version). This is not the international version. This various the full Samsung warranty. 
+ 
+I Will try to post a photo of their...
 
 ### Key Deal Highlights
 - **Current Price**: **$150.00** (Regularly $187.50)

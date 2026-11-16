@@ -8,7 +8,7 @@ merchant: Amazon
 category: Laptops & Computers
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20318115-347-pc-lego-star-wars-smart-play-at-st-attack-on-endor-set-31-99-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:00:04.494624+00:00'
+published_at: '2026-11-16T16:53:28.983093+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

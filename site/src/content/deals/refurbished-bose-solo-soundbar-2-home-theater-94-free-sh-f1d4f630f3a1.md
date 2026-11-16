@@ -7,8 +7,8 @@ discount_percent: 20
 merchant: Amazon
 category: Audio & Headphones
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
-affiliate_url: https://slickdeals.net/f/20315835-bose-solo-soundbar-2-refurbished-99-bose-com?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:00:04.495839+00:00'
+affiliate_url: https://slickdeals.net/f/20315835-refurbished-bose-solo-soundbar-2-home-theater-94-free-s-h?utm_source=rss&utm_content=fp&utm_medium=RSS2
+published_at: '2026-11-16T16:53:28.983774+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

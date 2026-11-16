@@ -9,7 +9,7 @@ merchant: Amazon
 category: Electronics & Gadgets
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20318412-39-97-577-piece-lego-one-piece-season-2-tony-tony-chopper-75643-2026-at-amazon?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:00:04.496171+00:00'
+published_at: '2026-11-16T16:53:28.983993+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount

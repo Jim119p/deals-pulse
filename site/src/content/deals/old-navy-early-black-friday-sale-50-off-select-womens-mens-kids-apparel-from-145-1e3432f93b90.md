@@ -9,7 +9,7 @@ merchant: Amazon
 category: Electronics & Gadgets
 image_url: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80
 affiliate_url: https://slickdeals.net/f/20319366-old-navy-50-off-early-black-friday-extra-30-off-from-1-47-free-shipping-50?utm_source=rss&utm_content=fp&utm_medium=RSS2
-published_at: '2026-11-16T16:00:04.495036+00:00'
+published_at: '2026-11-16T16:53:28.983269+00:00'
 features:
 - Lowest tracked price at Amazon
 - Verified authentic discount
