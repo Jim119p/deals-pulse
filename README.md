@@ -31,6 +31,66 @@ Google / Bing 搜索爬虫 (索引 Schema.org 绿标富媒体折扣卡片) -> �
 
 ---
 
+## ⚡ 核心启动与关闭命令速查（必读）
+
+系统支持 **后台无人值守自动化**、**手动单次运行** 以及 **本地实时预览** 三种模式，对应的启动与关闭操作如下：
+
+### 1. 24 小时后台自动化任务（Crontab）的启动与关闭
+后台每 6 小时自动唤醒一次采集与发布。
+
+- **🟢 开启 / 恢复后台自动运行**：
+  ```bash
+  (crontab -l 2>/dev/null | grep -v 'auto_run.sh'; echo '0 */6 * * * /bin/bash /home/user/deals_engine/auto_run.sh >> /home/user/deals_engine/pipeline.log 2>&1') | crontab -
+  ```
+- **🔴 暂停 / 关闭后台自动运行**（暂时不需要机器人打工时使用）：
+  ```bash
+  crontab -l | grep -v 'auto_run.sh' | crontab -
+  ```
+- **🔍 检查当前自动化是否处于开启状态**：
+  ```bash
+  crontab -l
+  # 如果输出包含 auto_run.sh，说明正在 24 小时自动运行中；如果为空，说明已关闭
+  ```
+
+---
+
+### 2. 手动单次任务的启动与紧急终止
+- **🟢 手动启动运行一次完整流水线**（立即抓取最新好价并打包推送到线上）：
+  ```bash
+  /bin/bash /home/user/deals_engine/auto_run.sh
+  ```
+- **🔴 紧急强行关闭 / 终止当前正在跑的采集进程**：
+  ```bash
+  pkill -f run_pipeline.py
+  ```
+
+---
+
+### 3. 本地开发预览服务器（Dev Server）的启动与关闭
+在 VS Code 编写页面模板时，如果想在浏览器边改边看实时效果：
+
+- **🟢 启动本地实时预览**：
+  ```bash
+  cd /home/user/deals_engine/site
+  npm run dev
+  # 启动后会在终端显示本地预览地址 (如 http://localhost:4321)
+  ```
+- **🔴 关闭本地实时预览**：
+  在运行该命令的终端窗口直接按下键盘快捷键：
+  ```bash
+  Ctrl + C
+  ```
+  *(或者在后台执行: `pkill -f astro` 彻底关闭)*
+
+---
+
+### 4. 线上网站的公网访问一键开启与关闭（维护模式）
+如果网站临时需要改版或维护，不想对外开放：
+- **🔴 关闭公网访问**：登录 Cloudflare 后台 -> 进入 `deals-pulse` -> 点击顶部 **【域】** 菜单 -> 将 `workers.dev` 开关切换为 **关闭 (Disabled)**。
+- **🟢 恢复公网访问**：再次点击切换为 **打开 (Enabled)**，全球秒级恢复访问。
+
+---
+
 ## 🚀 常用操作与运维速查手册
 
 ### 1. Mac 终端一键直连服务器
