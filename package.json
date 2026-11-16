@@ -1,0 +1,11 @@
+{
+  "name": "deals-pulse-root",
+  "private": true,
+  "scripts": {
+    "build": "cd site && npm install && npm run build",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
